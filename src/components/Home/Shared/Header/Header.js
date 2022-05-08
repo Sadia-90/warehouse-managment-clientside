@@ -1,9 +1,16 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+
+
+
 import './Header.css'
 
 const Header = () => {
+
+   
+
     return (
     //     <nav className='header'>
         
@@ -18,7 +25,7 @@ const Header = () => {
     // </nav>
 
 
-    <Navbar className='bg="dark" variant="dark"'>
+    <Navbar bg="dark" variant="dark">
     <Container>
     {/* <Navbar.Brand to="/home">Navbar</Navbar.Brand> */}
     <Nav className="me-auto">
@@ -28,6 +35,8 @@ const Header = () => {
     </Nav>
     </Container>
   </Navbar>
+
+
 
 
 
