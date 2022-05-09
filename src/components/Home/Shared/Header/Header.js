@@ -31,6 +31,7 @@ const Header = () => {
     <Nav className="me-auto">
       <Link to="/">Home</Link>
       <Link to="/InventoryDetails">InventoryDetails</Link>
+      <Link to="/Blogs">Blogs</Link>
       <Link to="/Login">Login</Link>
     </Nav>
     </Container>
