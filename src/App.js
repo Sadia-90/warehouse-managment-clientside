@@ -13,6 +13,7 @@ import Manageinventories from './components/Manageinventories/Manageinventories'
 import NotFound from './components/NotFound/NotFound';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 
+
 const App = () => {
   return (
     <div>
@@ -21,12 +22,8 @@ const App = () => {
       <Routes>
        
         <Route path="/" element={<Home></Home>}></Route>
-        
-        <Route path="/Login" element={<Login></Login>}></Route>
-        
-        <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
 
-        <Route path="/inventory/:inventoryId" element=
+        <Route path="/InventoryDetails/:InventoryDetailsId" element=
         {
          <RequireAuth>
         <InventoryDetails></InventoryDetails>
@@ -36,7 +33,8 @@ const App = () => {
 
         <Route path="/Manageinventories" element={<Manageinventories></Manageinventories>}></Route>
 
-
+        <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/Login" element={<Login></Login>}></Route>    
         <Route path="*" element={<NotFound></NotFound>}></Route>
 
 
