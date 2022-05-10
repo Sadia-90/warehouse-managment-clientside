@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "ENGINE DIAGNOSTIC",
+        "price": "9000",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://m.media-amazon.com/images/I/718bHaiaSLL._SL1500_.jpg",
+        "quantity": "54",
+        "supplier name": "naeem"
+    },
+    {
+        "id": 2,
+        "name": "WHEEL ALIGNMENT",
+        "price": "7000",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://m.media-amazon.com/images/I/61iCgZhrkiL._SL1080_.jpg",
+        "quantity": "90",
+        "supplier name": "sayeed"
+    },
+    {
+        "id": 3,
+        "name": "OIL CHANGING",
+        "price": "8000",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://5.imimg.com/data5/XS/LR/MY-24465010/ladies-cycle-500x500.jpg",
+        "quantity": "22",
+        "supplier name": "abdul"
+    },
+    {
+        "id": 4,
+        "name": "BRAKE REPARING",
+        "price": "5600",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://www.cdphp.com/-/media/corporate/images/newsroom/cdphp-cycle.jpg",
+        "quantity": "70",
+        "supplier name": "mafuz"
+
+    },
+    {
+        "id": 5,
+        "name": "WASH AND GLASSING",
+        "price": "4000",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.pinimg.com/originals/f9/a9/22/f9a922040bac9333f6767449de3f543f.jpg",
+        "quantity": "50",
+        "supplier name": "billal"
+    },
+    {
+        "id": 6,
+        "name": "COMPLETE ANALYSIS",
+        "price": "7500",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "img": "https://rukminim1.flixcart.com/image/612/612/kndi4y80/cycle/n/n/u/topgear-s27r2-with-microshift-gear-27-5-19-hercules-21-gear-original-imag22964nr4xjfg.jpeg?q=70",
+        "quantity": "70",
+        "supplier name": "ashad"
+    }
+]

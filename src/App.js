@@ -26,7 +26,7 @@ const App = () => {
         
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
 
-        <Route path="/inventory/:id" element=
+        <Route path="/inventory/:inventoryId" element=
         {
          <RequireAuth>
         <InventoryDetails></InventoryDetails>
