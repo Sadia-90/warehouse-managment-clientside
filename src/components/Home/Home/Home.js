@@ -3,6 +3,7 @@ import Products from '../../Products/Products';
 
 
 import Banner from '../Banner/Banner';
+import Exparts from './Exparts/Exparts';
 
 
 
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
            <Banner></Banner>
            <Products></Products>
+           <Exparts></Exparts>
            
 
      
