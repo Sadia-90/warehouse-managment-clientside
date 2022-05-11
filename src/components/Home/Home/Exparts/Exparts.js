@@ -12,7 +12,7 @@ const Exparts = () => {
     ]
     return (
         <div className='exparts-container'>
-          <h2 className='text-center'>our all exparts</h2>
+          <h2 id='exparts' className='text-center' mt-3>our all exparts</h2>
         <div>
             {
               exparts.map(expart => <Expart

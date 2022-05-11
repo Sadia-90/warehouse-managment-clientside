@@ -18,7 +18,7 @@ const Products = () => {
 
     return (
         <div>
-            <h2 className='Products-title'>Our Products</h2>
+            <h2 id='products' className='Products-title'>Our Products</h2>
 
             <div className='product-container'>
             {

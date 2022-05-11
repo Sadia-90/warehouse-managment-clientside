@@ -9,6 +9,7 @@ import Footer from './components/Home/Shared/Footer/Footer';
 import Header from './components/Home/Shared/Header/Header';
 import InventoryDetails from './components/InventoryDetails/InventoryDetails';
 import Login from './components/Login/Login';
+import Register from './components/Login/Register/Register';
 import Manageinventories from './components/Manageinventories/Manageinventories';
 import NotFound from './components/NotFound/NotFound';
 import RequireAuth from './components/RequireAuth/RequireAuth';
@@ -23,7 +24,7 @@ const App = () => {
        
         <Route path="/" element={<Home></Home>}></Route>
 
-        <Route path="/InventoryDetails/:InventoryDetailsId" element=
+        <Route path="/InventoryDetails" element=
         {
          <RequireAuth>
         <InventoryDetails></InventoryDetails>
@@ -34,7 +35,9 @@ const App = () => {
         <Route path="/Manageinventories" element={<Manageinventories></Manageinventories>}></Route>
 
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
-        <Route path="/Login" element={<Login></Login>}></Route>    
+        <Route path="/Login" element={<Login></Login>}></Route>
+        <Route path="/Register" element={<Register></Register>}></Route>
+
         <Route path="*" element={<NotFound></NotFound>}></Route>
 
 
