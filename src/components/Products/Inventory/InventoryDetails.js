@@ -7,7 +7,7 @@ const InventoryDetails = () => {
             <h1>inventory item</h1>
             <div className='text-left'>
             <Link to="/CheckOut">
-              <button className='btn-btn-primary'>Delivered</button>
+              <button className='btn-btn-primary'>Check Out</button>
             </Link>
             </div>
         </div>

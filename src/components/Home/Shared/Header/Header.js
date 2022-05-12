@@ -1,25 +1,25 @@
-// import { signOut } from 'firebase/auth';
+
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
  import { useAuthState } from 'react-firebase-hooks/auth';
-// import { NavLink } from 'react-router-dom';
+ import { NavLink } from 'react-router-dom';
  import auth from '../../../../firebase.init';
 // import { Container, Nav, Navbar } from 'react-bootstrap';
 
  import { Link } from 'react-router-dom';
 
-
-
-
 import './Header.css'
+import { signOut } from 'firebase/auth';
+
+
 
 const Header = () => {
 
    const [user] = useAuthState(auth);
 
-  // const handelSignOut = () => {
-  //     signOut(auth);
-  // }
+  const handelSignOut = () => {
+      signOut(auth);
+  }
 
     return (
   //     <>
@@ -68,9 +68,47 @@ const Header = () => {
                     </Nav>
                     <Nav>
                       <Nav.Link as={Link} to="/Blogs">Blogs</Nav.Link>
-                      <Nav.Link as={Link} to="/Login">
+
+                     { 
+                       user ?(
+
+                       <div>
+                          <NavLink
+                              to="/manageitems"
+                              className={({ isActive }) =>
+                                isActive ? "active-link" : "link"
+                              }
+                              >
+                                Manage Items
+                          </NavLink>
+                          <NavLink
+                            to="/additem"
+                            className={({ isActive }) =>
+                              isActive ? "active-link" : "link"
+                            }
+                          >
+                            Add Item
+                          </NavLink>
+
+                          <NavLink
+                            to="myitems"
+                            className={({ isActive }) =>
+                              isActive ? "active-link" : "link"
+                            }
+                          >
+                            My Items
+                          </NavLink>
+                      
+                        
+                          <button onClick={handelSignOut}>Sign Out</button>
+
+                        </div>
+                        ) :
+                     <Nav.Link as={Link} to="/Login">
                         Login
-                      </Nav.Link>
+                      </Nav.Link>}
+
+
                     </Nav>
                   </Navbar.Collapse>
                   </Container>
