@@ -1,0 +1,16 @@
+.exparts-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid: gap 20px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+@media only screen and (max-width:500px){
+    .exparts-container{
+    grid-template-columns: repeat(1, 1fr);
+    }
+}

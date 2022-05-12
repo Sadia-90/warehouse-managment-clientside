@@ -11,17 +11,14 @@ const Exparts = () => {
         {id: 3, name:' Dwayne', img: expart3},
     ]
     return (
-        <div className='exparts-container'>
-          <h2 id='exparts' className='text-center' mt-3>our all exparts</h2>
         <div>
+          <h2 id='exparts' className='text-center' mt-3>our all exparts</h2>
+        <div className='exparts-container'>
             {
               exparts.map(expart => <Expart
                    key={expart.id}
                    expart={expart}
-              
-              
               >
-
               </Expart>)  
             }
         </div>

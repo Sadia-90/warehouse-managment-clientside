@@ -1,7 +1,6 @@
 import React from 'react';
-
-import Products from '../../Products/Products';
-
+import Shop from '../../Shops/Shops';
+// import InventoriesDetails from '../../Products/InventoriesDetails';
 
 import Banner from '../Banner/Banner';
 import CustomerReview from '../CustomerReview/CustomerReview';
@@ -13,7 +12,7 @@ const Home = () => {
     return (
         <div className='m-5'>
            <Banner></Banner>
-           <Products></Products>
+           <Shop></Shop>
            <Exparts></Exparts>
            <CustomerReview></CustomerReview>
            

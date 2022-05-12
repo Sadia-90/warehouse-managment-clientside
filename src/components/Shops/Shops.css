@@ -1,15 +1,18 @@
-.product-container{
+.shops-container{
     display:grid;
     grid-template-columns: repeat(3,1fr);
     grid: gap 20px;
 }
 
-.Products-title{
+
+.shops-title{
     text-align: center;
 }
 
-@media only screen and (max-width:576px){
-    .product-container{
+
+
+@media only screen and (max-width:500px){
+    .shops-container{
     grid-template-columns: repeat(1, 1fr);
     }
 }
