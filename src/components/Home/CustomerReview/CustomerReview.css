@@ -1,0 +1,8 @@
+.reviews{
+    border:1px solid darkgray;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}

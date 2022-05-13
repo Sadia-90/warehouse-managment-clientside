@@ -1,9 +1,10 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import './CustomerReview.css'
 
 const CustomerReview = () => {
     return (
-        <div>
+        <div className='reviews'>
             <h3 className='text-center mt-3'>Feedback Part</h3>
             <Form>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -15,6 +16,8 @@ const CustomerReview = () => {
                     <Form.Control as="textarea" rows={3} />
                 </Form.Group>
             </Form>
+
+            <button className='btn-btn-primary'>Manage Inventories</button>
         </div>
     );
 };

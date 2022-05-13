@@ -14,7 +14,11 @@ import CheckOut from './components/CheckOut/CheckOut'
 import InventoryDetails from './components/Products/Inventory/InventoryDetails';
 import Manageinventories from './components/Manageinventories/Manageinventories';
 import NotFound from './components/NotFound/NotFound';
-import RequireAuth from './components/RequireAuth/RequireAuth'
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import MyItems from './components/MyItems/MyItems';
+import AddItems from './components/AddItems/AddItems';
+import ManageItems from './components/ManageItems/ManageItems';
+
 
 
 
@@ -35,6 +39,12 @@ const App = () => {
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/Login" element={<Login></Login>}></Route>
         <Route path="/Register" element={<Register></Register>}></Route>
+        <Route path="/MyItems" element={<MyItems></MyItems>}></Route>
+        <Route path="/AddItems" element={<AddItems></AddItems>}></Route>
+        <Route path="/ManageItems" element={<ManageItems></ManageItems>}></Route>
+
+
+
         <Route path="/CheckOut" element={
         
         <RequireAuth>

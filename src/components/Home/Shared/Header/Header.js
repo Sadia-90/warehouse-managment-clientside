@@ -22,35 +22,7 @@ const Header = () => {
   }
 
     return (
-  //     <>
-  //     <Navbar bg="primary" variant="dark">
-
-  //         {/* <div>
-  //             <h1>independent service</h1>
-  //         </div> */}
-
-
-  //         <Nav className="me-auto">
-  //             <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to='/'>Cycle Shop</NavLink>
-
-  //             <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to='/blog'>Blogs</NavLink>
-  //             <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to='/about'>About</NavLink>
-  //             {
-
-  //                 user ?
-  //                     <button onClick={handelSignOut}>sign out</button>
-  //                     :
-  //                     <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to='/login'>Login</NavLink>
-  //             }
-
-  //         </Nav>
-
-
-  //     </Navbar>
-
-
-
-  // </>
+     
 
       
 
@@ -71,32 +43,33 @@ const Header = () => {
 
                      { 
                        user ?(
-
-                       <div>
+                        // flex flex-col lg:flex-row
+                       <div className='manage-signout'>
                           <NavLink
-                              to="/manageitems"
+                              to="/ManageItems"
                               className={({ isActive }) =>
                                 isActive ? "active-link" : "link"
                               }
                               >
-                                Manage Items
+                                Manage Items , 
                           </NavLink>
+                         
                           <NavLink
-                            to="/additem"
+                            to="/AddItems"
                             className={({ isActive }) =>
                               isActive ? "active-link" : "link"
                             }
                           >
-                            Add Item
+                            Add Item ,
                           </NavLink>
-
+                        
                           <NavLink
-                            to="myitems"
+                            to="/MyItems"
                             className={({ isActive }) =>
                               isActive ? "active-link" : "link"
                             }
                           >
-                            My Items
+                            My Items ,
                           </NavLink>
                       
                         

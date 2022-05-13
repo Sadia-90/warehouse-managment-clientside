@@ -16,7 +16,7 @@ const Home = () => {
            <Exparts></Exparts>
            <CustomerReview></CustomerReview>
            
-
+          
      
         </div>
     );
