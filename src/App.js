@@ -11,13 +11,14 @@ import Header from './components/Home/Shared/Header/Header';
 import Login from './components/Login/Login';
 import Register from './components/Login/Register/Register';
 import CheckOut from './components/CheckOut/CheckOut'
-import InventoryDetails from './components/Products/Inventory/InventoryDetails';
+import ServiceDetails from './components/Products/Inventory/ServiceDetails';
 import Manageinventories from './components/Manageinventories/Manageinventories';
 import NotFound from './components/NotFound/NotFound';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import MyItems from './components/MyItems/MyItems';
 import AddItems from './components/AddItems/AddItems';
 import ManageItems from './components/ManageItems/ManageItems';
+import AddInventory from './components/AddInventory/AddInventory';
 
 
 
@@ -32,9 +33,13 @@ const App = () => {
       <Routes>
        
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/Shop/:id" element={<InventoryDetails></InventoryDetails>}></Route>
+        <Route path="/Shop/:id" element={<ServiceDetails></ServiceDetails>}></Route>
          
         <Route path="/Manageinventories" element={<Manageinventories></Manageinventories>}></Route>
+
+        {/* <Route path="/Manageinventories" element={<AddInventory></AddInventory>}></Route> */}
+        <Route path="/AddInventory" element={<AddInventory></AddInventory>}></Route>
+
 
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/Login" element={<Login></Login>}></Route>

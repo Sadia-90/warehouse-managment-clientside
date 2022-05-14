@@ -7,7 +7,7 @@ const Shops = () => {
     const [Shops, setShops] = useState([]);
 
     useEffect( ()=>{
-        fetch('shop.json')
+        fetch('http://localhost:5000/service/')
         .then(res => res.json())
         .then(data => setShops(data));
     },[])
@@ -19,7 +19,7 @@ const Shops = () => {
              
              {
                Shops.map(shop => <Shop
-                 key={shop.id}
+                 key={shop._id}
                  shop={shop}
                >
             </Shop>) 
