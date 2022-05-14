@@ -2,18 +2,20 @@ import React, { useEffect, useState,  } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const ServiceDetails = () => {
-  const { serviceId } =useParams();
+   const { id } =useParams();
+   console.log(id)
 
      const [service, setServiceDetails] = useState({});
 
      useEffect( () =>{
-          const url = `http://localhost:5000/service/${serviceId}`;
+          const url = `http://localhost:5000/service/${id}`;
+          console.log(url)
 
         fetch(url)
         .then(res=> res.json())
         .then(data => setServiceDetails(data))
 
-     },[]);
+     },[id]);
 
     return (
         <div>

@@ -12,13 +12,15 @@ import Login from './components/Login/Login';
 import Register from './components/Login/Register/Register';
 import CheckOut from './components/CheckOut/CheckOut'
 import ServiceDetails from './components/Products/Inventory/ServiceDetails';
-import Manageinventories from './components/Manageinventories/Manageinventories';
+
 import NotFound from './components/NotFound/NotFound';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import MyItems from './components/MyItems/MyItems';
 import AddItems from './components/AddItems/AddItems';
 import ManageItems from './components/ManageItems/ManageItems';
 import AddInventory from './components/AddInventory/AddInventory';
+import AddService from './components/AddService/AddService';
+import ManageServices from './components/ManageServices/ManageServices';
 
 
 
@@ -35,10 +37,28 @@ const App = () => {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/Shop/:id" element={<ServiceDetails></ServiceDetails>}></Route>
          
-        <Route path="/Manageinventories" element={<Manageinventories></Manageinventories>}></Route>
+        <Route path="/ManageServices" element={
+
+         <RequireAuth>
+        <ManageServices></ManageServices>
+        </RequireAuth>
+
+        }></Route>
 
         {/* <Route path="/Manageinventories" element={<AddInventory></AddInventory>}></Route> */}
         <Route path="/AddInventory" element={<AddInventory></AddInventory>}></Route>
+        <Route path="/AddService" element={
+
+        <RequireAuth> 
+
+        <AddService></AddService>
+
+        </RequireAuth>
+        }
+        >
+
+        </Route>
+
 
 
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>

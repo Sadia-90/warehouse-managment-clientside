@@ -34,7 +34,8 @@ const Header = () => {
                     <Nav className="me-auto">
                     
                       
-                      <Nav.Link as={Link} to="/Manageinventories">Manageinventories</Nav.Link>
+                      <Nav.Link as={Link} to="/ManageServices">ManageServices</Nav.Link>
+                      <Nav.Link as={Link} to="/AddService">AddService</Nav.Link>
                       <Nav.Link as={Link} to="/AddInventory">AddInventory</Nav.Link>
 
                       

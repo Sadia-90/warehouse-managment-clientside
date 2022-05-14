@@ -18,6 +18,10 @@ const RequireAuth = ({children}) => {
         return <Navigate to="/Login" state={{ from:location }} replace />
     }
 
+    // if (user.providerData[0] !user.emailVerified){
+
+    // }
+
     return children;
 };
 
