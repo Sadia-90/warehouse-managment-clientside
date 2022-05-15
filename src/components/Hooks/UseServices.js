@@ -11,7 +11,7 @@ const UseServices = () => {
     },[])
 
 
-    return [services]
+    return [services, setServices]
 };
 
 export default UseServices;

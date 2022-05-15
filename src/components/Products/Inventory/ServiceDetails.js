@@ -1,7 +1,8 @@
 import React, { useEffect, useState,  } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const ServiceDetails = () => {
+ 
    const { id } =useParams();
    console.log(id)
 
@@ -18,13 +19,17 @@ const ServiceDetails = () => {
      },[id]);
 
     return (
-        <div>
+        <div className=' mx-auto w-50'>
+           <img height={200} width={250} src={service.img} alt="" />
             <h1>inventory item: {service.name}</h1>
-            <div className='text-left'>
-            <Link to="/CheckOut">
-              <button className='btn-btn-primary'>Check Out</button>
-            </Link>
-            </div>
+            <h3>SupplierName: {service.supplierName}</h3>
+            <p>{service.description}</p>
+            <h3>Price:$ {service.price}</h3>
+            <h3>Quantity: {service.quantity}</h3>
+            
+  
+           
+            
         </div>
     );
 };

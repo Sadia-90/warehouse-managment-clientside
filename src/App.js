@@ -35,7 +35,11 @@ const App = () => {
       <Routes>
        
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/Shop/:id" element={<ServiceDetails></ServiceDetails>}></Route>
+        <Route path="/Shop/:id" element={
+          <RequireAuth>
+        <ServiceDetails></ServiceDetails>
+        </RequireAuth>
+        }></Route>
          
         <Route path="/ManageServices" element={
 

@@ -29,9 +29,11 @@ const AddService = () => {
             <h3>Please add a service</h3>
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+            
                 <input className='mb-2' placeholder='name' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea className='mb-2' placeholder='description' {...register("description")} />
                 <input className='mb-2' placeholder='price' type="number" {...register("price")} />
+                <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
                
                 <input type="submit" value="Add Service" />
             </form>

@@ -27,14 +27,16 @@ const handleSubmit = event =>{
     return (
         <div className='container w-50 mx-auto mt-4'>
             <form onSubmit={handleSubmit}>
-               
-                    
+
+              
+            <br/>
                    <input type="text" name='name' placeholder='name' required/>
             
                 <br/>
              
                     
                    <input type="email" name='email' placeholder='Email' />
+                  
                 
                 <br/>
                 

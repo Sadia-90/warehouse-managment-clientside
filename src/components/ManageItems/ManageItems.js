@@ -2,8 +2,8 @@ import React from 'react';
 import UseServices from '../Hooks/UseServices';
 
 const ManageItems = () => {
-
     const [services,setServices] = UseServices();
+
 
     const handleDelete = id =>{
         const procced = window.confirm('Aru you sure?');
@@ -18,8 +18,9 @@ const ManageItems = () => {
 
         .then(res => res.json())
         .then(data =>{
-            console.log(data);
+
             const remaining = services.filter(service => service._id !== id);
+            console.log(remaining);
             setServices(remaining);
         })
 
