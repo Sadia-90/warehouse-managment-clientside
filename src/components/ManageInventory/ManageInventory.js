@@ -1,7 +1,9 @@
 import React from 'react';
 import UseServices from '../Hooks/UseServices';
 
-const ManageItems = () => {
+const ManageInventory = () => {
+
+
     const [services,setServices] = UseServices();
 
 
@@ -25,11 +27,16 @@ const ManageItems = () => {
         })
 
        }
-    
+
     }
     return (
-       
-        <div className='w-50 mx-auto'>
+        <div>
+            <h3>manage inventory</h3>
+
+
+
+
+            <div className='w-50 mx-auto'>
             <h2>Manage Items</h2>
             {
                 services.map(service => <div key={service._id}>
@@ -37,7 +44,11 @@ const ManageItems = () => {
                 </div>)
             }
         </div>
+
+
+
+        </div>
     );
 };
 
-export default ManageItems;
+export default ManageInventory;

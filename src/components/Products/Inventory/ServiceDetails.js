@@ -1,4 +1,4 @@
-import React, { useEffect, useState, } from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 // import UseServices from '../Hooks/UseServices';
@@ -8,43 +8,38 @@ const ServiceDetails = () => {
   const { id } = useParams();
   console.log(id)
 
-  const [service, setServiceDetails] = useState({});
-  const [services, setServices] = useState({})
+  const [service] = useState({});
+ 
 
-  useEffect(() => {
+  // useEffect(() => {
+   
+
+  // }, [id]);
+
+
+  const handleUpdate = event =>{
+    event.preventDefult();
+    
+
+
     const url = `http://localhost:5000/service/${id}`;
     console.log(url)
 
-    fetch(url)
-      .then(res => res.json())
-      .then(data => setServiceDetails(data))
+    fetch(url,{
+      method: 'PUT',
+      headers: {
+          'content-type': 'application/json'
+      },
+      body:JSON.stringify(id) 
+   })
+    .then(res =>res.json())
+    .then(result =>{
+        console.log(result);
+    })
 
-  }, [id]);
-
-
-
-
-  const handleDelete = id => {
-    const procced = window.confirm('Aru you sure?');
-
-    if (procced) {
-      const url = `http://localhost:5000/service/${id}`;
-      fetch(url, {
-
-        method: 'DELETE'
-
-      })
-
-        .then(res => res.json())
-        .then(data => {
-
-          const remaining = services.filter(service => service._id !== id);
-          console.log(remaining);
-          setServices(remaining);
-        })
-
-    }
   }
+
+  
 
 
 
@@ -59,8 +54,10 @@ const ServiceDetails = () => {
       <h3>Price:$ {service.price}</h3>
       <h3>Quantity: {service.quantity}</h3>
 
+   
+      <button onClick={() => handleUpdate(service._id)}>update</button>
 
-      <Button onClick={() => handleDelete(service._id)}>deliverd button</Button>
+      <Button onClick={() => handleUpdate(service._id)}>deliverd button</Button>
 
     </div>
   );
