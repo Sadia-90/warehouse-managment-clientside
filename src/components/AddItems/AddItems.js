@@ -4,34 +4,34 @@ import { useForm } from 'react-hook-form';
 const AddItems = () => {
 
 
-    const { register, handleSubmit} = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url =`http://localhost:5000/service`;
+        const url = `https://gentle-fjord-55356.herokuapp.com/service`;
 
-       fetch(url,{
-          method: 'POST',
-          headers: {
-              'content-type': 'application/json'
-          },
-          body:JSON.stringify(data) 
-       })
-        .then(res =>res.json())
-        .then(result =>{
-            console.log(result);
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
         })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
 
     };
 
 
     return (
         <div className='w-50 mx-auto'>
-           
+
 
             <h3>Please add a service</h3>
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-            
+
                 <input className='mb-2' placeholder='name' {...register("name", { required: true, maxLength: 20 })} />
                 <input className='mb-2' placeholder='supllier name' {...register("SupllierName", { required: true, maxLength: 20 })} />
 
@@ -39,10 +39,10 @@ const AddItems = () => {
                 <input className='mb-2' placeholder='price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
                 <input className='mb-2' placeholder='Quantity' type="text" {...register("quantity")} />
-               
+
                 <input type="submit" value="Add Service" />
             </form>
-       </div>
+        </div>
     );
 };
 

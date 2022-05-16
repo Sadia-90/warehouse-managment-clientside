@@ -2,33 +2,33 @@ import React from 'react';
 import UseServices from '../Hooks/UseServices';
 
 const ManageItems = () => {
-    const [services,setServices] = UseServices();
+    const [services, setServices] = UseServices();
 
 
-    const handleDelete = id =>{
+    const handleDelete = id => {
         const procced = window.confirm('Aru you sure?');
-       
-       if(procced){
-        const url = `http://localhost:5000/service/${id}`;
-        fetch(url, {
 
-            method: 'DELETE'
-                    
-        })
+        if (procced) {
+            const url = `https://gentle-fjord-55356.herokuapp.com/service/${id}`;
+            fetch(url, {
 
-        .then(res => res.json())
-        .then(data =>{
+                method: 'DELETE'
 
-            const remaining = services.filter(service => service._id !== id);
-            console.log(remaining);
-            setServices(remaining);
-        })
+            })
 
-       }
-    
+                .then(res => res.json())
+                .then(data => {
+
+                    const remaining = services.filter(service => service._id !== id);
+                    console.log(remaining);
+                    setServices(remaining);
+                })
+
+        }
+
     }
     return (
-       
+
         <div className='w-50 mx-auto'>
             <h2>Manage Items</h2>
             {

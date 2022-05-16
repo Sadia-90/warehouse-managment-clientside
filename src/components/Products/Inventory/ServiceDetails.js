@@ -13,7 +13,7 @@ const ServiceDetails = () => {
   const [isChange, setIsChange] = useState(false)
 
   useEffect(() => {
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://gentle-fjord-55356.herokuapp.com/service/${id}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setService(data));
@@ -27,7 +27,7 @@ const ServiceDetails = () => {
     // sendInputField(number)
 
 
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://gentle-fjord-55356.herokuapp.com/service/${id}`;
     console.log(url)
     const newQuantity = Number(service.quantity) + parseFloat(inputFiled)
     fetch(url, {
@@ -35,7 +35,7 @@ const ServiceDetails = () => {
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify({quantity : newQuantity})
+      body: JSON.stringify({ quantity: newQuantity })
     })
       .then(res => res.json())
       .then(result => {
@@ -46,7 +46,7 @@ const ServiceDetails = () => {
 
 
   const handleDeliverd = () => {
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://gentle-fjord-55356.herokuapp.com/service/${id}`;
     const newQuantity = Number(service.quantity) - 1
     fetch(url, {
       method: 'PUT',
@@ -57,13 +57,13 @@ const ServiceDetails = () => {
     })
       .then(res => res.json())
       .then(result => {
-        
+
         console.log(result);
         setIsChange(!isChange)
       })
   }
 
- 
+
 
 
 
@@ -78,28 +78,28 @@ const ServiceDetails = () => {
       <h3>Quantity: {service.quantity}</h3>
 
 
-     
+
 
       <Button type='button' onClick={() => handleDeliverd(service._id)}>deliverd button</Button>
 
 
       <div className='container w-50 mx-auto mt-4'>
-            <form onSubmit={handleUpdate}>
-              <input type="number" name='number' placeholder='restocked' required />{" "}
-                
-             <button type="submit">restock</button>
-                  
-            </form>
-            
+        <form onSubmit={handleUpdate}>
+          <input type="number" name='number' placeholder='restocked' required />{" "}
+
+          <button type="submit">restock</button>
+
+        </form>
 
 
-           
-        </div>
-         
+
+
+      </div>
+
 
       {/* <AddInventory></AddInventory> */}
     </div>
-         
+
 
   );
 };
