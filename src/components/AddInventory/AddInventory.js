@@ -6,9 +6,9 @@ const handleSubmit = event =>{
     event.preventDefault();
    
        const name = event.target.name.value;
-        const email = event.target.email.value;
+        // const email = event.target.email.value;
        
-       const user = {name, email};
+       const user = {name};
   
      fetch('http://localhost:5000/user',{
          method: 'POST',
@@ -27,18 +27,7 @@ const handleSubmit = event =>{
     return (
         <div className='container w-50 mx-auto mt-4'>
             <form onSubmit={handleSubmit}>
-
-              
-            <br/>
-                   <input type="text" name='name' placeholder='name' required/>
-            
-                <br/>
-             
-                    
-                   <input type="email" name='email' placeholder='Email' />
-                  
-                
-                <br/>
+              <input type="text" name='name' placeholder='name' required/>
                 
                 <input type="submit" value="Add User" />
                   

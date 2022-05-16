@@ -4,7 +4,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import auth from '../../../../firebase.init';
-// import { Container, Nav, Navbar } from 'react-bootstrap';
+
 
 import { Link } from 'react-router-dom';
 
@@ -35,8 +35,7 @@ const Header = () => {
 
 
             <Nav.Link as={Link} to="/ManageInventory">ManageInventory</Nav.Link>
-            <Nav.Link as={Link} to="/AddService">AddService</Nav.Link>
-                      {/* <Nav.Link as={Link} to="/AddInventory">AddInventory</Nav.Link> */}
+           
 
 
           </Nav>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Shop from '../../Shops/Shops';
-// import InventoriesDetails from '../../Products/InventoriesDetails';
+
 
 import Banner from '../Banner/Banner';
 import CustomerReview from '../CustomerReview/CustomerReview';

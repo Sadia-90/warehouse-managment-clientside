@@ -17,7 +17,7 @@ const CustomerReview = () => {
                 </Form.Group>
             </Form>
 
-            <button className='btn-btn-primary'>Manage Inventories</button>
+            
         </div>
     );
 };

@@ -19,7 +19,7 @@ import MyItems from './components/MyItems/MyItems';
 import AddItems from './components/AddItems/AddItems';
 import ManageItems from './components/ManageItems/ManageItems';
 import AddInventory from './components/AddInventory/AddInventory';
-import AddService from './components/AddService/AddService';
+
 
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import UpdateUser from './components/UpdateUser/UpdateUser';
@@ -51,22 +51,12 @@ const App = () => {
 
         }></Route>
 
-        {/* <Route path="/Manageinventories" element={<AddInventory></AddInventory>}></Route> */}
+        
         <Route path="/AddInventory" element={<AddInventory></AddInventory>}></Route>
 
         <Route path="/updateUser/:id" element={<UpdateUser></UpdateUser>}></Route>
         
-        <Route path="/AddService" element={
-
-        <RequireAuth> 
-
-        <AddService></AddService>
-
-        </RequireAuth>
-        }
-        >
-
-        </Route>
+      
 
 
 
